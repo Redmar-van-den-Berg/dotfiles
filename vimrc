@@ -39,4 +39,4 @@ set fileformat=unix
 
 " Folding
 set foldmethod=indent
-set foldlevelstart=5
+set foldlevelstart=10
