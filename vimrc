@@ -37,6 +37,10 @@ set autoindent
 set smartindent
 set fileformat=unix
 
+" Set indentation for yaml files
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+
 " Folding
 set foldmethod=indent
 set foldlevelstart=10
