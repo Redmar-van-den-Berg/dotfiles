@@ -7,7 +7,7 @@ Plug 'broadinstitute/vim-wdl'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
-lug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
