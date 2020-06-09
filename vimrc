@@ -55,3 +55,8 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 " Folding
 set foldmethod=indent
 set foldlevelstart=10
+
+" Don't put vim cache files in the current folder
+set backupdir=.backup/,~/.backup/,/tmp//
+set directory=.swp/,~/.swp/,/tmp//
+set undodir=.undo/,~/.undo/,/tmp//
