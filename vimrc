@@ -28,6 +28,16 @@ let g:syntastic_auto_loc_list = 1
 "let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" Set status message for each split
+" [buffer number] followed by filename:
+set statusline=[%n]\ %t
+" for Syntastic messages:
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" show line#:column# on the right hand side
+set statusline+=%=%l:%c
+
 " Set indentattion
 set tabstop=4
 set softtabstop=4
