@@ -8,6 +8,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'nvie/vim-flake8'
 Plug 'tpope/vim-fugitive'
+Plug 'pearofducks/ansible-vim'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -17,6 +18,9 @@ autocmd FileType gitcommit setlocal spell
 " Set snakemake syntax on snakemake files
 au BufNewFile,BufRead Snakefile set syntax=snakemake
 au BufNewFile,BufRead *.smk set syntax=snakemake
+
+" Set ruby syntax on vagrant files
+au BufNewFile,BufRead Vagrantfile set syntax=ruby
 
 " Recommended syntastic settings
 set statusline+=%#warningmsg#
