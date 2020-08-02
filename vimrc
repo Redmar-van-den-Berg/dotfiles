@@ -16,12 +16,11 @@ call plug#end()
 autocmd FileType gitcommit setlocal spell
 
 " Set snakemake syntax on snakemake files
-au BufNewFile,BufRead Snakefile set syntax=snakemake
-au BufNewFile,BufRead *.smk set syntax=snakemake
+au BufNewFile,BufRead Snakefile set filetype=snakemake
+au BufNewFile,BufRead *.smk set filetype=snakemake
 
 " Set ruby syntax on vagrant files
-au BufNewFile,BufRead Vagrantfile set syntax=ruby
-autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
 
 " Recommended syntastic settings
 set statusline+=%#warningmsg#
@@ -44,18 +43,24 @@ set statusline+=%*
 set statusline+=%=%l:%c
 
 " Set indentattion
+"" Default indentatino
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set textwidth=79
 set expandtab
-set autoindent
-set smartindent
+set nosmartindent
+set cindent
+set cinkeys-=0#
+set indentkeys-=0#
 set fileformat=unix
 
-" Set indentation for yaml files
+"" Set indentation for yaml files
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
+
+"" Set indentation for ruby (Vagrant) files
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 " Folding
 set foldmethod=indent
