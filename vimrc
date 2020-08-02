@@ -21,6 +21,7 @@ au BufNewFile,BufRead *.smk set syntax=snakemake
 
 " Set ruby syntax on vagrant files
 au BufNewFile,BufRead Vagrantfile set syntax=ruby
+autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
 " Recommended syntastic settings
 set statusline+=%#warningmsg#
