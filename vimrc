@@ -62,6 +62,9 @@ autocmd FileType yml setlocal ts=2 sts=2 sw=2 expandtab
 "" Set indentation for ruby (Vagrant) files
 autocmd FileType ruby setlocal ts=2 sts=2 sw=2 expandtab
 
+"" Set indentation for wdl files
+autocmd FileType wdl setlocal ts=4 sts=4 sw=4 expandtab
+
 " Folding
 set foldmethod=indent
 set foldlevelstart=10
